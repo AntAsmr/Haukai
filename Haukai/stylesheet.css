@@ -1,0 +1,178 @@
+/*Added in the html to the body and used the overflow property in order to stop the excess space popping up the right of the site thsi solved it*/
+/*font and colour for body text*/
+html,body{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background:rgb(255, 255, 255);
+	font-family: 'Raleway',sans-serif;
+	color: rgb(0, 0, 0);
+}
+/*Displays the banner image and the overlay image 
+Used tutorial to get the banner background with an overlay and raleway font fonts 
+FullyWorld Web Tutorials, (2019). Bootstrap 4 Simple Landing Page.
+https://www.youtube.com/watch?v=evSgm1bKdxU&t=922s&ab_channel=FullyworldWebTutorials*/
+.banner{
+	height: 100vh;
+	width: 100%;
+	background:url('image/overlay.png'),url('image/outside.jpg');
+	background-position: top;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+/*padding*/
+.banner .navbar{
+	margin-top:4%;
+}
+/*Name resturant in top left corner*/
+.banner .navbar-name{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+}
+/*positioning for nav bar selection*/
+.banner .nav{
+	margin-right:10%; 
+}
+/*Font colour for nav text*/
+.banner .nav li a{
+	color:#aaa;
+	font-size: 1.2em;
+}
+/*padding for banner text placement */
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+/*h1 font size*/
+.banner .info h1{
+	font-size: 3.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+/*h2 font size*/
+.banner .info h2{
+	font-size: 1.5em;
+	font-weight: 500;
+	color:#fff
+}
+/*padding for about section*/
+#about .main-about{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-top:5%;
+}
+/*Main heading for about section and gold line to the left of heading*/
+#about .main-about .about-us-info .about-us-info-heading{
+	border-left:5px solid #a18130;
+	padding:10px 15px;
+	font-size: 3em;
+	font-weight: 700;
+	color:rgb(0, 0, 0);
+	font-family: 'Raleway',sans-serif;
+}
+/*Subtext under heading in about section*/
+#about .main-about .about-us-info .about-us-info-subheading{
+	font-size: 1.5em;
+	font-weight: 500;
+	color:rgb(0, 0, 0);
+	font-family: 'Raleway',sans-serif;
+	width: 100%;
+}
+
+/*Footer begins I used this tutorial to help build aspects of the footer
+Webshala. (2020). Responsive Footer Design Using Html & Css.
+https://www.youtube.com/watch?v=YOb67OKw62s&t=1s&ab_channel=TheWebShala*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+/*Colour of background for footer*/
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+/*colum sizing*/
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+/*font size and placement for h3*/
+.footer-col h3{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+/*Golden underline for each heading of the footer*/
+.footer-col h3::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #a58a40;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+/*subtext under h3*/
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+/*Upon hover colour changes*/
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+/*Social media link icons*/
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+/*Social media icon changes colour on hover*/
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*Makes footer responsive for different screen size*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
